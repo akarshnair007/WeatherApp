@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  /* overflow: hidden; */
+}
+#main {
+  position: relative; /* Ensure video is positioned relative to this element */
+  height: 100%;
+  width: 100%;
+  background-color: rgba(32, 32, 32, 0.418);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#backgroundVideo {
+  position: absolute; /* Position the video absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire parent */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+  z-index: 1.5; /* Ensure it appears above the background image */
+  border-radius: 10px; /* Apply border radius if necessary */
+  opacity: 0.3; /* Adjust opacity if needed */
+}
+.mid {
+  height: 50vh;
+}
+.mid_bottom {
+  position: relative;
+  top: 280px;
+  background-color: rgba(0, 0, 0, 0.534);
+  margin-left: 150px;
+  margin-right: 162px;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.rightPart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  box-shadow: -9px 10px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.allWeeks li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.521);
+  padding: 9px 5px 0px 10px;
+  border-radius: 10px;
+}
+.weekName {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+}
+.weektemp {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+.allWeeks ul li {
+  margin-top: 5px;
+}
+.time {
+  font-family: "Workbench", sans-serif;
+  color: greenyellow;
+}
+
+.leftPart {
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  height: 80%;
+  width: 100%;
+  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+.top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+.coord,
+.cont {
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+.lat {
+  font-size: 21px;
+}
+.lon {
+  font-size: 21px;
+}
+.latitude {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.longitude {
+  font-size: 20px;
+  font-weight: bold;
+
+  color: white;
+}
+.rise {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.set {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+ul li {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  list-style: none;
+  gap: 3px;
+}
+.sunrise {
+  color: orange;
+  font-size: 13px;
+}
+.sunset {
+  color: orange;
+  font-size: 13px;
+}
+.mid {
+  /* background-color: rgba(32, 32, 32, 0.418); */
+  border-radius: 10px;
+}
+.input {
+  border-radius: 10px;
+  border: 1px solid black;
+  outline: none;
+  padding: 5px 5px;
+  margin-left: 100px;
+  background-color: rgb(185, 185, 185);
+  color: white;
+}
+.button {
+  padding: 5px 11px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background-color: azure;
+  color: black;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.left h1 {
+  color: white;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.temp {
+  font-family: "Lora", serif;
+  font-family: 500;
+  color: white;
+}
+.cityName {
+  font-family: "Bebas Neue", sans-serif;
+  font-family: 500;
+  color: white;
+}
+.cloud {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+}
+.bottom h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+
+  color: white;
+}
+.feels {
+  font-family: "Lora", serif;
+  font-family: 500;
+  color: white;
+}
+.forcastHeading {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: white;
+}
+
+.max,
+.min,
+.heading_cities,
+.card-body h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: lighter;
+}
+
+.heading_cities {
+  font-size: 40px;
+  color: white;
+}
+
+.card-body h3 {
+  color: white;
+  text-shadow: -2px 5px 38px rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
+}
+
+.card-subtitle span {
+  color: white;
+  text-shadow: -2px 5px 38px rgba(0, 0, 0, 0.9);
+}
+
+.card-text {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 18px;
+  color: white;
+  text-shadow: -2px 5px 38px rgba(0, 0, 0, 0.9);
+  margin: 0;
+  font-weight: 500;
+}
+
+.max,
+.min {
+  font-size: 20px;
+  margin: 0;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+@media (max-width: 451px) {
+  .mid_bottom {
+    margin: 0 auto;
+    top: 180px;
+    margin-left: 0;
+  }
+  .left h1 {
+    font-size: 16px; /* Adjusted font size */
+    margin-right: 5px;
+  }
+  .bottom h3 {
+    font-size: 16px; /* Adjusted font size */
+    margin-right: 5px;
+  }
+  .right {
+    gap: 5px;
+    margin-right: 5px;
+  }
+  #weatherImg {
+    height: 20px;
+    width: 20px;
+  }
+  .cloud {
+    font-size: 16px; /* Adjusted font size */
+    margin-right: 5px;
+  }
+
+  .bottom h3 {
+    font-size: 16px; /* Adjusted font size */
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 530px) {
+  .mid_bottom {
+    padding: 10px 20px 20px;
+  }
+  .left h1 {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .bottom h3 {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .right {
+    gap: 5px;
+    margin-right: 5px;
+  }
+  #weatherImg {
+    height: 25px;
+    width: 25px;
+  }
+  .cloud {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .bottom h3 {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 762px) {
+  .mid_bottom {
+    top: 17px;
+  }
+  .mid {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .lat {
+    font-size: 11px;
+  }
+  .lon {
+    font-size: 11px;
+  }
+  .latitude {
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+  }
+  .longitude {
+    font-size: 11px;
+    font-weight: bold;
+
+    color: white;
+  }
+  .rise {
+    font-size: 11px;
+  }
+  .set {
+    font-size: 11px;
+  }
+  .sunrise {
+    font-size: 5px;
+  }
+  .sunset {
+    font-size: 5px;
+  }
+}
