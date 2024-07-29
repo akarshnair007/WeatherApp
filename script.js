@@ -175,21 +175,11 @@ const clickhandle = async () => {
     scale: 0.1,
   });
 
-  const updateTime = async () => {
-    // Fetch world time
-    const resWorldTime = await fetch(
-      `https://api.api-ninjas.com/v1/worldtime?city=${cityName}`,
-      {
-        headers: {
-          "X-Api-Key": "gPkSXOC76R1NotejohR9FQ==fgebg80qpB7cBLw8",
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    const worldTimeData = await resWorldTime.json();
-    const hours = worldTimeData.hour;
-    const min = worldTimeData.minute;
-    const sec = worldTimeData.second;
+  const updateTime = () => {
+    const date = new Date();
+    const hours = date.getHours();
+    const min = date.getMinutes();
+    const sec = date.getSeconds();
     const AmPm = hours >= 12 ? "PM" : "AM";
 
     document.querySelector(
